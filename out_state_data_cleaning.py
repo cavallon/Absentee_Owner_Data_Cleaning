@@ -3,8 +3,8 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import scipy.stats as st
 
-#import out of state owners file:
-file_path = Path("C:/Users/chris/Desktop/Data_Projects/Absentee_Owner_Data_Cleaning/Resources/mercer_county_outofstate_owners.csv")
+#import out of state owners file (must update the path for each file you need to process):
+file_path = Path("C:/Users/cjava/OneDrive/Desktop/Challenges/Absentee_Owner_Data_Cleaning/Resources/burlington_county_absentee_owners.csv")
 
 #create dataframe:
 state_data = pd.read_csv(file_path)
@@ -32,5 +32,8 @@ state_data['Property Zip Code'] = state_data['Property Zip Code'].apply(lambda x
 #sort data by property city:
 state_data.sort_values(by=['Property City'], inplace=True)
 
-#export finalized data to csv for mailing:
-state_data.to_csv('merc_county_absentee_owner_mailing_list.csv')
+#select city for final mailing list(If needed. Otherwise comment this line out for the full list):
+city_data = state_data.loc[state_data['Property City'] == "Willingboro"]
+
+#export finalized data to csv for mailing (update title depending on final list, and change city_data to state_data if full list is needed):
+city_data.to_csv('willingboro_absentee_owner_mailing_list.csv')
