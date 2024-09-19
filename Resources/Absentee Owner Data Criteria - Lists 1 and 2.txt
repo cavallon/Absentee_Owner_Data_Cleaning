@@ -1,0 +1,9 @@
+Absentee Owner Data Criteria for MLS Tax Record Search
+
+Residential 
+Non Owner Occupied
+Last sale at least 15 years ago
+3000 building sq ft or less
+non corporate owned
+Taxable total assessment of 500k or less
+Lot sq ft of 50k or less. 
