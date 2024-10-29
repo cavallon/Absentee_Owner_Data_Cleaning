@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import scipy.stats as st
 
 #import out of state owners file (must update the path for each file you need to process):
-file_path = Path("C:/Users/chris/Desktop/Data_Projects/Absentee_Owner_Data_Cleaning/Resources/target_cities_filtered_absentee&vacant.csv")
+file_path = Path("C:/Users/chris/Desktop/Data_Projects/Absentee_Owner_Data_Cleaning/burl_camden_hunt_mercer_absentee_owners.csv")
 
 #create dataframe:
 state_data = pd.read_csv(file_path)
